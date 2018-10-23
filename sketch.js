@@ -57,7 +57,7 @@ function draw() {
   strokeWeight(1);
 
   push();
-  translate(0, height / 1.7);
+  translate(0, height - (width/1.2)*(9/16)/1.7);
   var waveform = fft.waveform();
   beginShape();
   for (var i = 0; i < waveform.length; i++) {
@@ -70,7 +70,7 @@ function draw() {
   pop();
 
   push();
-  translate(width / 2, height / 2);
-  image(woman, 0, 0 + windowHeight / 10, 1920, 1080);
+  image(woman, width / 2, height - (width/1.2)*(9/16)/2, width/1.2, (width/1.2)*(9/16));
+
   pop();
 }
